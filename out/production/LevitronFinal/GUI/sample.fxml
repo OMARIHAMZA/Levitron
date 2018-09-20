@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="100.0" style="-fx-background-color: #48A5ea;">
+         <children>
+            <ImageView fx:id="magnetImageView" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               </image>
+            </ImageView>
+            <ImageView fx:id="spinningTopImageView" fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               </image>
+            </ImageView>
+            <ImageView fx:id="airImageView" fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               </image>
+            </ImageView>
+            <ImageView fx:id="aboutImageView" fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="spinningTopPane" layoutX="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="604.0" visible="false">
+         <children>
+            <Label text="Spinning Top Characterstics" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <JFXSlider id="slider" fx:id="dipoleValueSlider" layoutX="21.0" layoutY="176.0" majorTickUnit="5.0" max="5.0" min="1.0" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="1.0" />
+            <Label layoutX="21.0" layoutY="96.0" text="Mass" textFill="#48a5ea" />
+            <JFXSlider id="slider" fx:id="spinningTopMassSlider" blockIncrement="0.1" layoutX="21.0" layoutY="113.0" majorTickUnit="9.0" max="20.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="10.0" />
+            <Label layoutX="21.0" layoutY="161.0" text="Dipole Value" textFill="#48a5ea" />
+            <Separator layoutY="49.0" prefHeight="3.0" prefWidth="559.0" />
+            <Separator layoutX="161.0" layoutY="78.0" orientation="VERTICAL" prefHeight="200.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Separator>
+            <Label layoutX="557.0" layoutY="-1.0" onMouseClicked="#exit" prefHeight="55.0" prefWidth="30.0" text="X" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+               </padding>
+            </Label>
+            <JFXSlider id="slider" fx:id="angluarVelocitySlider" blockIncrement="1.0" layoutX="21.0" layoutY="241.0" majorTickUnit="10.0" max="150.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="30.0" />
+            <Label layoutX="21.0" layoutY="226.0" text="Angular Velocity" textFill="#48a5ea" />
+            <JFXTextField fx:id="positionXTextField" focusColor="#48a5ea" labelFloat="true" layoutX="164.0" layoutY="102.0" promptText="Position X">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="positionYTextField" focusColor="#48a5ea" labelFloat="true" layoutX="164.0" layoutY="167.0" promptText="Position Y">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="positionZTextField" focusColor="#48a5ea" labelFloat="true" layoutX="164.0" layoutY="230.0" promptText="Position Z">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </JFXTextField>
+            <Separator layoutX="299.0" layoutY="78.0" orientation="VERTICAL" prefHeight="200.0">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </Separator>
+            <JFXSlider id="slider" fx:id="spinningTopLengthSlider" blockIncrement="0.1" layoutX="365.0" layoutY="215.0" majorTickUnit="30.0" max="5.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="1.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXSlider>
+            <Label layoutX="365.0" layoutY="113.0" text="Radius" textFill="#48a5ea">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <JFXSlider id="slider" fx:id="spinningTopRadiusSlider" blockIncrement="0.1" layoutX="365.0" layoutY="130.0" majorTickUnit="30.0" max="5.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="1.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXSlider>
+            <Label layoutX="365.0" layoutY="200.0" text="Length" textFill="#48a5ea">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="magnetPane" layoutX="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="604.0">
+         <children>
+            <Label text="Magnetic Characterstics" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <JFXSlider id="slider" fx:id="baseRadiusSlider" layoutX="19.0" layoutY="211.0" max="20.0" min="15.0" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="18.0" />
+            <Label layoutX="19.0" layoutY="119.0" text="Magnetic Base Force" textFill="#48a5ea" />
+            <JFXSlider id="slider" fx:id="electricCurrentScalingSlider" blockIncrement="0.1" layoutX="19.0" layoutY="136.0" max="2.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+            <Label layoutX="19.0" layoutY="196.0" text="Base Radius" textFill="#48a5ea" />
+            <Separator layoutY="49.0" prefHeight="3.0" prefWidth="559.0" />
+            <JFXCheckBox fx:id="magneticFieldCheckBox" checkedColor="#48a5ea" layoutX="19.0" layoutY="78.0" onAction="#disableMagnets" selected="true" text="Magnetic Field" textFill="#48a5ea" />
+            <Separator layoutX="299.0" layoutY="87.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Label layoutX="557.0" layoutY="-1.0" onMouseClicked="#exit" prefHeight="55.0" prefWidth="30.0" text="X" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="airPane" layoutX="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="604.0" visible="false">
+         <children>
+            <Label text="Air Drag Characterstics" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <JFXSlider fx:id="linearDragSlider" layoutX="14.0" layoutY="181.0" majorTickUnit="1.0" max="10.0" min="1.0" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="1.0" />
+            <Label layoutX="14.0" layoutY="101.0" text="Damping" textFill="#48a5ea" />
+            <JFXSlider id="slider" fx:id="rotationalDampingConstant" blockIncrement="0.1" layoutX="14.0" layoutY="118.0" majorTickUnit="1.0" max="1.0" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="1.0" />
+            <Label layoutX="14.0" layoutY="166.0" text="Linear Drag" textFill="#48a5ea" />
+            <Separator layoutY="49.0" prefHeight="3.0" prefWidth="559.0" />
+            <Separator layoutX="277.0" layoutY="101.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Label layoutX="557.0" layoutY="-1.0" onMouseClicked="#exit" prefHeight="55.0" prefWidth="30.0" text="X" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+               </padding>
+            </Label>
+            <JFXSlider fx:id="magnusCoefficientSlider" layoutX="14.0" layoutY="243.0" majorTickUnit="1.0" max="10.0" min="1.0" showTickLabels="true" showTickMarks="true" style="-fx-control-inner-background: #48A5ea #48A5ea;" value="1.0" />
+            <Label layoutX="14.0" layoutY="228.0" text="Magnus Coefficient" textFill="#48a5ea" />
+         </children>
+      </Pane>
+      <JFXButton layoutX="109.0" layoutY="363.0" style="-fx-background-color: #48A5ea;" text="Reset All" textFill="#f5f5f5" />
+      <JFXButton defaultButton="true" layoutX="585.0" layoutY="363.0" onAction="#startSimulationMethod" style="-fx-background-color: #48A5ea;" text="Start Simulation" textFill="#fcf8f8" />
+   </children>
+</AnchorPane>
